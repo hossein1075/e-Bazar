@@ -1,35 +1,35 @@
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
-import { AiOutlineInbox } from "react-icons/ai";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import { BsBox2Heart } from "react-icons/bs";
+import { PiShoppingCartLight } from "react-icons/pi";
 function NavDesktop() {
     return (
         <>
-            <nav>
+            <nav className='bg-orange-200 lg:block hidden'>
                 <div className="container">
-                    <div>
+                    <div className='flex items-center justify-between p-6.25 xl:mx-15'>
                         <a href="#">
                             <img src="/icons/logo.png" alt="e-bazar" />
                         </a>
 
-                        <ul>
-                            <li>
-                                <a href="#">
+                        <ul className='flexCenter gap-8 *:hover:text-orange-600 *:transition-all *:duration-500 *:ease-in-out'>
+                            <li className='text-orange-600 transition-all duration-500 ease-in-out'>
+                                <a href="#" className='text-xl'>
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className='text-xl'>
                                     Shop
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className='text-xl'>
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className='text-xl'>
                                     Blogs
                                 </a>
 
@@ -45,7 +45,7 @@ function NavDesktop() {
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className='leading-[140%] text-xl'>
                                     Pages
                                 </a>
                                   {/* subMenu */}
@@ -64,16 +64,16 @@ function NavDesktop() {
                             </li>
                         </ul>
 
-                        <div>
-                            <span>
+                        <div className='flex items-center justify-between gap-8'>
+                            <a href='#' className='inline-block *:size-7.5'>
                                 <CiSearch />
-                            </span>
-                            <span>
-                                <AiOutlineInbox />
-                            </span>
-                            <span>
-                                <MdOutlineShoppingCart/>
-                            </span>
+                            </a>
+                            <a href='#' className='inline-block *:size-7.5'>
+                                <BsBox2Heart />
+                            </a>
+                            <a href='#' className='inline-block *:size-7.5'>
+                                <PiShoppingCartLight />
+                            </a>
                         </div>
                     </div>
                 </div>

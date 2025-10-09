@@ -40,7 +40,11 @@
 }
 /* class */
 @layer components {
-
+  .flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* elements */
@@ -54,5 +58,5 @@
 }
 /* container */
 @utility container {
-   @apply mx-auto px-3
+   @apply mx-auto px-3.75
 }
