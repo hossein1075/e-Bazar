@@ -1,0 +1,41 @@
+.btn_after {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn_after::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: #FAFAFA;
+    box-shadow: 42px 42px 24px rgba(0, 0, 0, 0.01),
+        24px 24px 20px rgba(0, 0, 0, 0.03),
+        11px 11px 15px rgba(0, 0, 0, 0.04),
+        3px 3px 8px rgba(0, 0, 0, 0.05),
+        0px 0px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 13px;
+    color: inherit;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.btn_after:hover::after {
+    height: 100%;
+    top: auto;
+    bottom: 0;
+    
+}
+
+.btn_after a {
+    z-index: 1;
+    position: relative;
+}
+
+.btn_after:hover a {
+    color: #2C2D2F;
+
+}

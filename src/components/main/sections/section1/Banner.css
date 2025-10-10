@@ -1,0 +1,9 @@
+.p_after::after {
+    position: absolute;
+    background: #EC7755;
+    content: '';
+    left: 0;
+    width: 190px;
+    height: 2px;
+    bottom: -18px;
+}

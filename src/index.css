@@ -60,6 +60,9 @@
   }
 }
 /* container */
-@utility container {
-   @apply mx-auto px-3.75
-}
+
+  @utility container {
+     @apply mx-auto px-3.75 max-w-7xl
+  }
+
+
