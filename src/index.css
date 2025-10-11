@@ -8,6 +8,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Lato Bold';
   src: url('../public/fonts/Lato-Bold.ttf') format('ttf');
@@ -24,6 +25,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'RobotoSerif Bold';
   src: url('../public/fonts/RobotoSerif-Bold.ttf') format('ttf');
@@ -31,13 +33,15 @@
   font-style: normal;
   font-display: swap;
 }
+
 /* theme */
 @theme {
- --font-Lato-Regular: "Lato Regular", sans-serif; 
- --font-Lato-Bold: "Lato Bold", sans-serif; 
- --font-RobotoSerif-Regular: "RobotoSerif Regular", sans-serif; 
- --font-RobotoSerif-Bold: "RobotoSerif Bold", sans-serif; 
+  --font-Lato-Regular: "Lato Regular", sans-serif;
+  --font-Lato-Bold: "Lato Bold", sans-serif;
+  --font-RobotoSerif-Regular: "RobotoSerif Regular", sans-serif;
+  --font-RobotoSerif-Bold: "RobotoSerif Bold", sans-serif;
 }
+
 /* class */
 @layer components {
   .flexCenter {
@@ -45,6 +49,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .shadow-sub {
     box-shadow: 42px 42px 24px rgba(0, 0, 0, 0.01), 24px 24px 20px rgba(0, 0, 0, 0.03), 11px 11px 15px rgba(0, 0, 0, 0.04), 3px 3px 8px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
   }
@@ -59,10 +64,10 @@
     background: #FEE4D2;
   }
 }
+
 /* container */
 
-  @utility container {
-     @apply mx-auto px-3.75 max-w-7xl
-  }
-
+@utility container {
+  @apply mx-auto px-3.75 max-w-7xl
+}
 

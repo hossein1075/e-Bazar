@@ -5,9 +5,9 @@ import { PiShoppingCartLight } from "react-icons/pi";
 function NavDesktop() {
     return (
         <>
-            <nav className='fixed top-0 left-0 right-0 bg-orange-200 lg:block hidden'>
+            <nav className='fixed top-0 left-0 right-0 bg-orange-200 lg:block hidden z-50'>
                 <div className="container">
-                    <div className='flex items-center justify-between p-6.25 xl:mx-15'>
+                    <div className='flex items-center justify-between py-6.25'>
                         <a href="#">
                             <img src="/icons/logo.png" alt="e-bazar" />
                         </a>
