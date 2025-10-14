@@ -10,7 +10,7 @@ function NavMobile() {
     }
     return (
         <>
-            <nav className='fixed top-0 left-0 right-0 bg-orange-200 block lg:hidden z-50 relative overflow-hidden'>
+            <nav className='fixed top-0 left-0 right-0 bg-orange-200 block lg:hidden z-50 relative '>
                 <div className="container">
                     <div className='flex items-center justify-between py-6.25'>
                         <a href="#">

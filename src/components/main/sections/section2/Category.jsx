@@ -1,11 +1,15 @@
 import React from 'react'
 import CategoryBox from '../../componentsMain/CategoryBox/CategoryBox'
+
 function Category() {
     return (
         <>
-            <section>
+            <section className='mb-5'>
                 <div className="container">
-                    <CategoryBox />
+                   <div className='grid md:grid-cols-2 items-center gap-6'>
+                     <CategoryBox/>
+                    <CategoryBox/>
+                   </div>
                 </div>
             </section>
         </>

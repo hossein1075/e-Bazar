@@ -40,6 +40,9 @@
   --font-Lato-Bold: "Lato Bold", sans-serif;
   --font-RobotoSerif-Regular: "RobotoSerif Regular", sans-serif;
   --font-RobotoSerif-Bold: "RobotoSerif Bold", sans-serif;
+  --text-4x-l-5: 2.5rem;
+   --tracking-tightest: -0.04em; 
+   --tracking-tightest2: -0.03em; 
 }
 
 /* class */
@@ -70,4 +73,5 @@
 @utility container {
   @apply mx-auto px-3.75 max-w-7xl
 }
+
 
