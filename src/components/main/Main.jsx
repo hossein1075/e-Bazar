@@ -5,7 +5,7 @@ import Products from './sections/section3/Products'
 function Main() {
   return (
     <>
-    <main className='pt-20 lg:mt-25'>
+    <main className='pt-20 mt-20 lg:mt-25'>
       <Banner/>
       <Category/>
       <Products/>

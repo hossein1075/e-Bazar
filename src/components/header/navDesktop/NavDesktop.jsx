@@ -13,23 +13,23 @@ function NavDesktop() {
                         </a>
 
                         <ul className='flexCenter gap-8'>
-                            <li className='text-orange-600 transition-all duration-500 ease-in-out'>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-all duration-500 ease-in-out'>
+                            <li className='text-orange-600 transition-original'>
+                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-all duration-500 ease-in-out'>
+                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Shop
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-all duration-500 ease-in-out'>
+                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
                                     About
                                 </a>
                             </li>
                             <li className='relative group'>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-all duration-500 ease-in-out'>
+                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Blogs
                                 </a>
 
@@ -38,16 +38,16 @@ function NavDesktop() {
                                <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                  <ul className='*:py-2'>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-all duration-500 ease-in-out'>Blog Listing</a>
+                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</a>
                                     </li>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-all duration-500 ease-in-out'>Blog Detail</a>
+                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</a>
                                     </li>
                                 </ul>
                                </div>
                             </li>
                             <li className='relative group'>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-all duration-500 ease-in-out'>
+                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Pages
                                 </a>
                                   {/* subMenu */}
@@ -55,13 +55,13 @@ function NavDesktop() {
                               <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                   <ul className='*:py-2'>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-all duration-500 ease-in-out'>Product Detail</a>
+                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Product Detail</a>
                                     </li>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-all duration-500 ease-in-out'>Cart</a>
+                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Cart</a>
                                     </li>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-all duration-500 ease-in-out'>Checkout</a>
+                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Checkout</a>
                                     </li>
                                 </ul>
                               </div>

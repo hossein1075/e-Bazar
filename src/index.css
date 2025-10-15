@@ -3,7 +3,7 @@
 /* lato */
 @font-face {
   font-family: 'Lato Regular';
-  src: url('../public/fonts/Lato-Regular.ttf') format('ttf');
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Lato Bold';
-  src: url('../public/fonts/Lato-Bold.ttf') format('ttf');
+  src: url('/fonts/Lato-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 /* roboto serif */
 @font-face {
   font-family: 'RobotoSerif Regular';
-  src: url('../public/fonts/RobotoSerif-Regular.ttf') format('ttf');
+  src: url('/fonts/RobotoSerif-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'RobotoSerif Bold';
-  src: url('../public/fonts/RobotoSerif-Bold.ttf') format('ttf');
+  src: url('/fonts/RobotoSerif-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,8 +41,12 @@
   --font-RobotoSerif-Regular: "RobotoSerif Regular", sans-serif;
   --font-RobotoSerif-Bold: "RobotoSerif Bold", sans-serif;
   --text-4x-l-5: 2.5rem;
+  --text-80px: 5rem;
+  --text-27px: 1.68rem;
    --tracking-tightest: -0.04em; 
    --tracking-tightest2: -0.03em; 
+   --tracking-tightest3: -0.02em; 
+     --radius-10px: 0.625rem; 
 }
 
 /* class */
@@ -55,6 +59,9 @@
 
   .shadow-sub {
     box-shadow: 42px 42px 24px rgba(0, 0, 0, 0.01), 24px 24px 20px rgba(0, 0, 0, 0.03), 11px 11px 15px rgba(0, 0, 0, 0.04), 3px 3px 8px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
+  }
+  .transition-original {
+   @apply transition-all  duration-500 ease-in-out
   }
 }
 
