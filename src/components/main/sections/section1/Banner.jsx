@@ -5,7 +5,7 @@ import InfoBtnOrigin from '../../componentsMain/BtnOrigin/InfoBtnOrigin'
 function Banner() {
     return (
         <>
-            <section className='md:bg-[url(/images/hero-banner.png)] bg-center bg-no-repeat bg-size-cover xl::h-[940px]'>
+            <section className='md:bg-[url(/images/hero-banner.png)] bg-center bg-no-repeat bg-size-cover xl::h-235'>
                 <div className="container">
                     <div className='mb-10 sm:mb-0'>
                         <h5 className='text-3xl sm:text-[35px] md:text-4x-l-5 xl:text-[47px] font-Lato-Bold font-bold tracking-tightest2 text-zinc-800 mb-2'>YOUR</h5>
