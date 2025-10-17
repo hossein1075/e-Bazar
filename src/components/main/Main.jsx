@@ -5,6 +5,8 @@ import Products from './sections/section3/Products'
 import BannerOff from './sections/section4/BannerOff'
 import Feautres from './sections/section5/Feautres'
 import Testimonials from './sections/section6/Testimonials'
+import Blog from './sections/section7/Blog'
+
 function Main() {
   return (
     <>
@@ -15,6 +17,7 @@ function Main() {
       <BannerOff/>
       <Feautres/>
       <Testimonials/>
+      <Blog/>
     </main>
     </>
   )
