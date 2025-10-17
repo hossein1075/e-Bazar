@@ -3,6 +3,7 @@ import Banner from './sections/section1/Banner'
 import Category from './sections/section2/Category'
 import Products from './sections/section3/Products'
 import BannerOff from './sections/section4/BannerOff'
+import Feautres from './sections/section5/Feautres'
 function Main() {
   return (
     <>
@@ -11,6 +12,7 @@ function Main() {
       <Category/>
       <Products/>
       <BannerOff/>
+      <Feautres/>
     </main>
     </>
   )
