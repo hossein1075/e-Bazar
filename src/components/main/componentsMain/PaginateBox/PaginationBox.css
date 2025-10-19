@@ -1,0 +1,13 @@
+.before-name {
+position: relative;
+}
+.before-name::before {
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: -12px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #54575C;
+}
