@@ -9,7 +9,6 @@ function CategoryBox() {
         <div className='sm:absolute sm:top-1/2 sm:left-[3%] sm:-translate-y-1/2'>
           <h2 className='mb-2 font-bold tracking-tightest text-orange-600'>
             <span className='text-4x-l-5 lg:text-6xl'>
-
             10%
             </span>
             <span className='inline-block ml-2 lg:ml-4.25 text-xl lg:text-2xl'>OFF</span>

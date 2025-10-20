@@ -43,12 +43,13 @@
   --text-4x-l-5: 2.5rem;
   --text-80px: 5rem;
   --text-27px: 1.68rem;
-   --tracking-tightest: -0.04em; 
-   --tracking-tightest2: -0.03em; 
-   --tracking-tightest3: -0.02em; 
-   --tracking-tightest4: 0.03em; 
-     --radius-10px: 0.625rem; 
-     --radius-15px: 0.9375rem; 
+  --tracking-tightest: -0.04em;
+  --tracking-tightest2: -0.03em;
+  --tracking-tightest3: -0.02em;
+  --tracking-tightest4: 0.03em;
+  --radius-10px: 0.625rem;
+  --radius-15px: 0.9375rem;
+  --breakpoint-middle: 62.1875rem;
 }
 
 /* class */
@@ -62,8 +63,9 @@
   .shadow-sub {
     box-shadow: 42px 42px 24px rgba(0, 0, 0, 0.01), 24px 24px 20px rgba(0, 0, 0, 0.03), 11px 11px 15px rgba(0, 0, 0, 0.04), 3px 3px 8px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
   }
+
   .transition-original {
-   @apply transition-all  duration-500 ease-in-out
+    @apply transition-all duration-500 ease-in-out
   }
 }
 
@@ -82,5 +84,3 @@
 @utility container {
   @apply mx-auto px-3.75 max-w-7xl
 }
-
-

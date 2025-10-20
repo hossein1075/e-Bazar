@@ -6,9 +6,9 @@ import './PaginationBox.css'
 function PaginationBox() {
     return (
         <>
-            <div className='w-[306px] rounded-3xl shadow-sub overflow-hidden'>
-                <div className='object-cover'>
-                    <img src="/images/blog/blog-1.png" className='w-full' alt="fruit blog" />
+            <div className='rounded-3xl shadow-sub group overflow-hidden'>
+                <div className='overflow-hidden'>
+                    <img src="/images/blog/blog-1.png" className='w-full object-cover group-hover:scale-110 transition-all duration-800 transition-linear' alt="fruit blog" />
                 </div>
                 <div className='p-5'>
                     <div className='flexCenter gap-6 border-b-1 border-neutral-600/50 border-solid pb-4 mb-4'>
