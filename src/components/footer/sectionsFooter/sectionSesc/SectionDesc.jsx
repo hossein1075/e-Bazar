@@ -5,9 +5,9 @@ import InfoBtnOrigin from '../../../main/componentsMain/BtnOrigin/InfoBtnOrigin'
 function SectionDesc() {
     return (
         <>
-            <section className=''>
-                <div className="container flex items-center justify-center">
-                    <div className='flex flex-wrap justify-center gap-8'>
+            <section className='mb-16'>
+                <div className="container flex items-center justify-center w-full">
+                    <div className='flex flex-wrap justify-between w-full gap-8'>
                         <div>
                             <img src="/icons/logo.png" className='mb-8' alt="logo" />
                             <p className='tracking-tightest4 max-w-54'>
