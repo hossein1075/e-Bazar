@@ -50,6 +50,7 @@
   --radius-10px: 0.625rem;
   --radius-15px: 0.9375rem;
   --breakpoint-middle: 62.1875rem;
+  --breakpoint-sx: 28.125rem;
 }
 
 /* class */
@@ -76,6 +77,7 @@
     font-family: var(--font-Lato-Regular);
     color: #2C2D2F;
     background: #FEE4D2;
+    position: relative;
   }
 }
 
