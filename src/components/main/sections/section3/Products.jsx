@@ -17,11 +17,10 @@ function Products() {
     // convert data to Array
     const products = data ? Object.values(data) : []
     const allCategories = ['All', ...new Set(products.map(menu => menu.category))]
-    console.log(allCategories);
 
     // filter products
     const filteredCategory = allProducts === 'All' ? products : products.filter(item => item.category === allProducts)
-    
+
     return (
         <>
             <section className='pt-6 sm:pt-8 md:pt-12 pb-15 md:pb-17 lg:pb-24'>
@@ -30,12 +29,12 @@ function Products() {
                     <h2 className='text-center text-5xl md:text-6xl lg:text-80px tracking-tightest text-neutral-950 font-RobotoSerif-Regular mb-8 md:mb-12'>All Products</h2>
                     <div>
                         <ul className='mb-8 md:mb-12 flex justify-center flex-wrap gap-7'>
-                            {allCategories.map(categoty => (
-                            <li className={`hover:text-orange-600 transition-original tracking-tightest3 text-2xl md:text-27px cursor-pointer 
+                            {allCategories.map((categoty, index) => (
+                                <li key={index} className={`hover:text-orange-600 transition-original tracking-tightest3 text-2xl md:text-27px cursor-pointer 
                                 ${allProducts === categoty ? 'text-orange-600' : ''}
                                 `}
-                            onClick={() => setAllProducts(categoty)}
-                            >{categoty}</li>
+                                    onClick={() => setAllProducts(categoty)}
+                                >{categoty}</li>
                             ))}
                         </ul>
                     </div>
@@ -44,6 +43,7 @@ function Products() {
                             const imgProduct = productBox[index % productBox.length]
                             return (
                                 <ProductsBox
+                                    key={index}
                                     img={imgProduct.img}
                                     title={item.title}
                                     price={item.price}
