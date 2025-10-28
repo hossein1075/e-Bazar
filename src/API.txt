@@ -1,0 +1,25 @@
+//////////////////////////////--------------off--------------//////////////////////////////
+API ==> https://info-products-7e7f7-default-rtdb.firebaseio.com/productsOff.json
+methods: get
+
+
+//////////////////////////////--------------category--------------//////////////////////////////
+API ==> https://info-products-7e7f7-default-rtdb.firebaseio.com/category.json
+methods: get
+
+
+//////////////////////////////--------------features products--------------//////////////////////////////
+API ==> https://info-products-7e7f7-default-rtdb.firebaseio.com/Products.json
+methods: get
+
+
+//////////////////////////////--------------client--------------//////////////////////////////
+API ==> https://info-products-7e7f7-default-rtdb.firebaseio.com/clients.json
+methods: get
+
+
+//////////////////////////////--------------blog--------------//////////////////////////////
+API ==> https://info-products-7e7f7-default-rtdb.firebaseio.com/blog.json
+methods: get
+
+
