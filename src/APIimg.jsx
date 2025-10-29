@@ -42,7 +42,15 @@ const paginateImgBox = [
     {id:3, img: 'public/images/blog/blog-3.png',},
     {id:4, img: 'public/images/blog/blog-4.png',},
 ]
+const slideImgBox = [
+    {id:1, img: 'public/images/slider/Image.png',},
+    {id:2, img: 'public/images/slider/Image-1.png',},
+    {id:3, img: 'public/images/slider/Image.png',},
+    {id:4, img: 'public/images/slider/Image-1.png',},
+    {id:5, img: 'public/images/slider/Image-2.png',},
+    {id:6, img: 'public/images/slider/Image.png',},
+]
 
 
 
-export { categoryBox, productBox, featureBox, paginateImgBox }
+export { categoryBox, productBox, featureBox, paginateImgBox, slideImgBox }
