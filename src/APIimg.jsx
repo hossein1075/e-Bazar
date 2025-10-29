@@ -36,7 +36,13 @@ const featureBox = [
     {id:7, img: '/images/Products/p-13.png',},
     {id:8, img: '/images/Products/p-14.png',},
 ]
+const paginateImgBox = [
+    {id:1, img: 'public/images/blog/blog-1.png',},
+    {id:2, img: 'public/images/blog/blog-2.png',},
+    {id:3, img: 'public/images/blog/blog-3.png',},
+    {id:4, img: 'public/images/blog/blog-4.png',},
+]
 
 
 
-export { categoryBox, productBox, featureBox }
+export { categoryBox, productBox, featureBox, paginateImgBox }
