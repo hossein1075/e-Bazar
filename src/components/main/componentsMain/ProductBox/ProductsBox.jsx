@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import BtnOrigin from '../BtnOrigin/BtnOrigin'
 import InfoBtnOrigin from '../BtnOrigin/InfoBtnOrigin'
 import { BsBox2Heart } from "react-icons/bs";
 import { FaEye } from "react-icons/fa";
-function ProductsBox({img, price, title}) {
+import { ProductsContext } from '../../../../Contexts/ProductsContext';
+function ProductsBox({img, price, title, id}) {
+
+  const contextData = useContext(ProductsContext)
+
+  const addCart = () => {
+    const cart = {img, price, title, id}
+    contextData.addToCart(cart)
+  }
   return (
     <>
       <div className='w-75 border-t-3 border-solid border-orange-600 mb-12 group'>
@@ -24,7 +32,7 @@ function ProductsBox({img, price, title}) {
         <div>
           <a href="#" className='block group-hover:text-orange-600 transition-original tracking-tightest3 text-2xl md:text-27px mb-4'>{title}</a>
           <div className='w-full'>
-            <BtnOrigin text={InfoBtnOrigin[2].info} className='w-full' />
+            <BtnOrigin text={InfoBtnOrigin[2].info} className='w-full' onClick={addCart}/>
           </div>
         </div>
       </div>

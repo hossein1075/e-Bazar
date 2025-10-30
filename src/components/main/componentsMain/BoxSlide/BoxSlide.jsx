@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import { ProductsContext } from '../../../../Contexts/ProductsContext'
 function BoxSlide({title, img, desc}) {
+
+    const contextData = useContext(ProductsContext)
     return (
         <>
             <div className='bg-zinc-800 border-t-3 border-solid border-orange-600 rounded-b-3xl p-6 text-zinc-50'>

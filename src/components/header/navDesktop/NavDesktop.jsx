@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { CiSearch } from "react-icons/ci";
 import { BsBox2Heart } from "react-icons/bs";
 import { PiShoppingCartLight } from "react-icons/pi";
+import { ProductsContext } from '../../../Contexts/ProductsContext';
 function NavDesktop() {
+
+    const contextData = useContext(ProductsContext)
     return (
         <>
             <nav className='fixed top-0 left-0 right-0 bg-orange-200 lg:block hidden z-50'>
@@ -75,7 +78,7 @@ function NavDesktop() {
                             <a href='#' className='inline-block *:size-7.5'>
                                 <BsBox2Heart />
                             </a>
-                            <a href='#' className='inline-block *:size-7.5'>
+                            <a href='#' className='inline-block *:size-7.5' onClick={()=> {contextData.setIsShowSide(true)}}>
                                 <PiShoppingCartLight />
                             </a>
                         </div>

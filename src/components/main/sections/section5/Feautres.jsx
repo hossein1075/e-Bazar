@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import ProductsBox from '../../componentsMain/ProductBox/ProductsBox'
 import useSWR from 'swr'
 import { featureBox } from '../../../../APIimg'
+import { ProductsContext } from '../../../../Contexts/ProductsContext'
 const fetcher = (url) => fetch(url).then(res => res.json())
 function Feautres() {
     const {data, error, isLoading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/Products.json', fetcher)
     const products = data ? Object.values(data) : []
+
+    const contextData = useContext(ProductsContext)
+
+    useEffect(()=> {
+        if(products.length > 0 && contextData.allProducts.length === 0) {
+            const merged = products.map((item, index) => ({
+                ...item, img: featureBox[index % featureBox.length].img
+            }))
+
+            contextData.setAllProducts(merged)
+        }
+    },[products])
     
     return (
         <>
@@ -20,6 +33,7 @@ function Feautres() {
                                 return (
                                     <ProductsBox 
                                     key={index}
+                                    id={item.id || index}
                                     title={item.title}
                                     price={item.price}
                                     img={featureImg.img}
