@@ -10,7 +10,10 @@ function Category() {
         fetcher
     )
 
-    const products = data ? (Array.isArray(data) ? data : Object.values(data)) : [];
+    const products = data ? (Array.isArray(data) ? data : Object.entries(data).map(([key, value]) => ({
+    id: key,
+    ...value
+}))) : [];
 
 
     return (

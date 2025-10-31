@@ -15,7 +15,10 @@ function Products() {
     const { data, error, isLoading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/category.json', fetcher)
 
     // convert data to Array
-    const products = data ? Object.values(data) : []
+   const products = data ? Object.entries(data).map(([key, value]) => ({
+        id: key,
+        ...value
+    })) : []
     const allCategories = ['All', ...new Set(products.map(menu => menu.category))]
 
     // filter products
@@ -44,6 +47,7 @@ function Products() {
                             return (
                                 <ProductsBox
                                     key={index}
+                                    id={item.id}
                                     img={imgProduct.img}
                                     title={item.title}
                                     price={item.price}

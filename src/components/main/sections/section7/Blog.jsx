@@ -13,12 +13,15 @@ function Blog() {
     const [pagination, setPagination] = useState()
     let pageSize = 3
     let pageNumber
-    const { data, error, isloading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/blog.json',
+    const { data, error, isLoading  } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/blog.json',
         fetcher
     )
 
     const paginateProduct = useMemo(() => {
-        return data ? Object.values(data) : []
+        return data ? Object.entries(data).map(([key, value]) => ({
+            id:key,
+            ...value
+        })) : []
     }, [data])
 
     useEffect(() => {

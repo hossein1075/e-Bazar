@@ -6,7 +6,10 @@ import { ProductsContext } from '../../../../Contexts/ProductsContext'
 const fetcher = (url) => fetch(url).then(res => res.json())
 function Feautres() {
     const {data, error, isLoading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/Products.json', fetcher)
-    const products = data ? Object.values(data) : []
+    const products = data ? Object.entries(data).map(([key, value]) => ({
+        id: key,
+        ...value
+    })) : []
 
     const contextData = useContext(ProductsContext)
 
@@ -33,7 +36,7 @@ function Feautres() {
                                 return (
                                     <ProductsBox 
                                     key={index}
-                                    id={item.id || index}
+                                    id={item.id}
                                     title={item.title}
                                     price={item.price}
                                     img={featureImg.img}

@@ -8,11 +8,25 @@ function App() {
   const [cart, setCart] = useState([])
   const [isShowSide, setIsShowSide] = useState(false)
 
+  
+
   const addToCart = (product)=> {
-    setCart(prev => [...prev, product])
-    setIsShowSide(true)
-   console.log('Added to cart:', product)
-    
+  setCart(prev => {
+    let exist = prev.find(item => item.id === product.id)
+
+    if(exist) {
+     return prev.map(item => item.id === product.id ? {...item, count: item.count + 1} : item)
+    } else {
+      return [...prev, {...product, count : 1}]
+    }
+  })
+    console.log('add shod', product);
+   setIsShowSide(true) 
+  }
+
+  const removeCart = (id) => {
+    setCart(prev => prev.filter(item => item.id !== id))
+  console.log("Removed item with id:", id)
   }
   return (
     <>
@@ -24,7 +38,8 @@ function App() {
           setCart,
           isShowSide,
           setIsShowSide,
-          addToCart
+          addToCart,
+          removeCart
         }}
       >
         <Home />
