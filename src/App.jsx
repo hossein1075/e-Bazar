@@ -3,10 +3,14 @@ import './App.css'
 import Home from './pages/Home'
 import SideBar from './components/sideBar/SideBar'
 import { ProductsContext } from './Contexts/ProductsContext'
+import Shop from './pages/Shop'
+import routes from './routes'
+import { useRoutes } from 'react-router-dom'
 function App() {
   const [allProducts, setAllProducts] = useState([])
   const [cart, setCart] = useState([])
   const [isShowSide, setIsShowSide] = useState(false)
+  const route = useRoutes(routes)
 
 
   useEffect(() => {
@@ -53,10 +57,11 @@ function App() {
           removeCart
         }}
       >
-        <Home />
-        
+       {route}
+        {isShowSide && (
+         <div onClick={() => setIsShowSide(false)} className='fixed inset-0 z-[200] bg-zinc-800/20 h-full'></div> 
+        )}
         <SideBar />
-        {/* <div className='fixed inset-0 z-[200] bg-zinc-800/20 h-full'></div> */}
       </ProductsContext.Provider>
     </>
   )

@@ -3,6 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { BsBox2Heart } from "react-icons/bs";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { ProductsContext } from '../../../Contexts/ProductsContext';
+import { Link } from 'react-router-dom';
 function NavDesktop() {
 
     const contextData = useContext(ProductsContext)
@@ -17,54 +18,54 @@ function NavDesktop() {
 
                         <ul className='flexCenter gap-8'>
                             <li className='text-orange-600 transition-original'>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <Link to="/" className='text-xl hover:text-orange-600 transition-original'>
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <Link to="/shop" className='text-xl hover:text-orange-600 transition-original'>
                                     Shop
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <Link to="#" className='text-xl hover:text-orange-600 transition-original'>
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li className='relative group'>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <Link to="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Blogs
-                                </a>
+                                </Link>
 
                                 {/* subMenu */}
 
                                <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                  <ul className='*:py-2'>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</a>
+                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</Link>
                                     </li>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</a>
+                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</Link>
                                     </li>
                                 </ul>
                                </div>
                             </li>
                             <li className='relative group'>
-                                <a href="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <Link to="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Pages
-                                </a>
+                                </Link>
                                   {/* subMenu */}
 
                               <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                   <ul className='*:py-2'>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Product Detail</a>
+                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Product Detail</Link>
                                     </li>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Cart</a>
+                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Cart</Link>
                                     </li>
                                     <li>
-                                        <a href="#" className='text-xl block hover:text-orange-600 transition-original'>Checkout</a>
+                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Checkout</Link>
                                     </li>
                                 </ul>
                               </div>
@@ -72,15 +73,15 @@ function NavDesktop() {
                         </ul>
 
                         <div className='flex items-center justify-between gap-8'>
-                            <a href='#' className='inline-block *:size-7.5'>
+                            <Link to='#' className='inline-block *:size-7.5'>
                                 <CiSearch />
-                            </a>
-                            <a href='#' className='inline-block *:size-7.5'>
+                            </Link>
+                            <Link to='#' className='inline-block *:size-7.5'>
                                 <BsBox2Heart />
-                            </a>
-                            <a href='#' className='inline-block *:size-7.5' onClick={()=> {contextData.setIsShowSide(true)}}>
+                            </Link>
+                            <Link to='#' className='inline-block *:size-7.5' onClick={()=> {contextData.setIsShowSide(true)}}>
                                 <PiShoppingCartLight />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
