@@ -7,6 +7,7 @@ let InfoBtnOrigin = [
     {id: 5, info: 'Subscribe'},
     {id: 5, info: 'VIEW CART'},
     {id: 5, info: 'CHECKOUT'},
+    {id: 5, info: 'Continue Shopping'},
 ]
 
 export default InfoBtnOrigin
