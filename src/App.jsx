@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Home from './pages/Home'
 import SideBar from './components/sideBar/SideBar'
@@ -7,6 +7,17 @@ function App() {
   const [allProducts, setAllProducts] = useState([])
   const [cart, setCart] = useState([])
   const [isShowSide, setIsShowSide] = useState(false)
+
+
+  useEffect(() => {
+    let saveCart = localStorage.getItem("cart")
+    if(saveCart) {
+      setCart(JSON.parse(saveCart))
+    }
+  }, [])
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
 
   
 
