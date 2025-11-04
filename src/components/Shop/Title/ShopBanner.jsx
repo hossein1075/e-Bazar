@@ -3,7 +3,7 @@ import React from 'react'
 function ShopBanner() {
   return (
     <>
-    <section className='mt-25 pt-25 md:bg-[url(/images/Shop/banner.png)] bg-bottom bg-no-repeat bg-cover xl:h-75'>
+    <section className='mt-20 md:mt-25 pt-20 md:pt-25 md:bg-[url(/images/Shop/banner.png)] bg-bottom bg-no-repeat bg-cover xl:h-75'>
         <div className="container">
             <div>
                 <h1 className='font-bold font-RobotoSerif-Bold text-80px leading-[120%] tracking-tightest'>Cart</h1>
