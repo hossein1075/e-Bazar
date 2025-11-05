@@ -43,6 +43,21 @@ function App() {
     setCart(prev => prev.filter(item => item.id !== id))
   console.log("Removed item with id:", id)
   }
+
+  const increaseCount = (id) => {
+    setCart( prev => (
+      prev.map(item => (
+        item.id === id ? {...item, count: item.count + 1}: item
+      ))
+    ))
+  }
+  const decreaseCount = (id) => {
+ setCart( prev => (
+      prev.map(item => (
+        item.id === id && item.count > 1 ? {...item, count: item.count - 1}: item
+      ))
+    ))
+  }
   return (
     <>
       <ProductsContext.Provider
@@ -54,7 +69,9 @@ function App() {
           isShowSide,
           setIsShowSide,
           addToCart,
-          removeCart
+          removeCart,
+          increaseCount,
+          decreaseCount
         }}
       >
        {route}

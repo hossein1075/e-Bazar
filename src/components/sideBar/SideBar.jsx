@@ -29,7 +29,7 @@ function SideBar() {
                             </div>
                             <div className='flex flex-col items-start'>
                                 <h5 className='font-bold font-Lato-Bold text-zinc-900 mb-2'>{item.title}</h5>
-                                <h6 className='font-bold font-Lato-Bold text-zinc-900 mb-4'>{item.count} x ${item.price}</h6>
+                                <h6 className='font-bold font-Lato-Bold text-zinc-900 mb-4'>{item.count} x ${item.price * item.count}</h6>
                                 <button className='text-orange-600 font-medium'>
                                     <a href="#" onClick={() => contextData.removeCart(item.id)}>REMOVE</a>
                                 </button>

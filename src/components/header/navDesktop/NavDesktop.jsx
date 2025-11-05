@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { BsBox2Heart } from "react-icons/bs";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { ProductsContext } from '../../../Contexts/ProductsContext';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 function NavDesktop() {
 
     const contextData = useContext(ProductsContext)
@@ -17,55 +17,55 @@ function NavDesktop() {
                         </a>
 
                         <ul className='flexCenter gap-8'>
-                            <li className='text-orange-600 transition-original'>
-                                <Link to="/" className='text-xl hover:text-orange-600 transition-original'>
+                            <li>
+                                <NavLink to="/" className='text-xl hover:text-orange-600 transition-original'>
                                     Home
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/shop" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="/shop" className='text-xl hover:text-orange-600 transition-original'>
                                     Shop
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="#" className='text-xl hover:text-orange-600 transition-original'>
                                     About
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className='relative group'>
-                                <Link to="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Blogs
-                                </Link>
+                                </NavLink>
 
                                 {/* subMenu */}
 
                                <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                  <ul className='*:py-2'>
                                     <li>
-                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</Link>
+                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</Link>
+                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</NavLink>
                                     </li>
                                 </ul>
                                </div>
                             </li>
                             <li className='relative group'>
-                                <Link to="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="#" className='text-xl hover:text-orange-600 transition-original'>
                                     Pages
-                                </Link>
+                                </NavLink>
                                   {/* subMenu */}
 
                               <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                   <ul className='*:py-2'>
                                     <li>
-                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Product Detail</Link>
+                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Product Detail</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Cart</Link>
+                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Cart</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="#" className='text-xl block hover:text-orange-600 transition-original'>Checkout</Link>
+                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Checkout</NavLink>
                                     </li>
                                 </ul>
                               </div>
@@ -73,15 +73,15 @@ function NavDesktop() {
                         </ul>
 
                         <div className='flex items-center justify-between gap-8'>
-                            <Link to='#' className='inline-block *:size-7.5'>
+                            <NavLink to='#' className='inline-block *:size-7.5'>
                                 <CiSearch />
-                            </Link>
-                            <Link to='#' className='inline-block *:size-7.5'>
+                            </NavLink>
+                            <NavLink to='#' className='inline-block *:size-7.5'>
                                 <BsBox2Heart />
-                            </Link>
-                            <Link to='#' className='inline-block *:size-7.5' onClick={()=> {contextData.setIsShowSide(true)}}>
+                            </NavLink>
+                            <NavLink to='#' className='inline-block *:size-7.5' onClick={()=> {contextData.setIsShowSide(true)}}>
                                 <PiShoppingCartLight />
-                            </Link>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
