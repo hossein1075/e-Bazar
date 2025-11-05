@@ -8,7 +8,11 @@ function Shop() {
   return (
     <>
     <Header/>
-    <ShopBanner/>
+
+    <ShopBanner 
+    title={'Shop'}
+    />
+    
     <ShoppingCart/>
     <Footer/>
     </>
