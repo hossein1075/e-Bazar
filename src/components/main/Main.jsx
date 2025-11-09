@@ -16,7 +16,7 @@ function Main() {
       <Products/>
       <BannerOff/>
       <Feautres/>
-      <Testimonials/>
+      <Testimonials className='text-center'/>
       <Blog/>
     </main>
     </>

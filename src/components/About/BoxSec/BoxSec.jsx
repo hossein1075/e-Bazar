@@ -4,7 +4,7 @@ import information from '../../../informationBoxAbout'
 function BoxSec() {
     return (
         <>
-            <section className='py-12'>
+            <section className='py-12 lg:py-24'>
                 <div className="container">
                     <div>
                         <h2 className='text-center sm:text-start text-5xl md:text-6xl lg:text-80px tracking-tightest  font-RobotoSerif-Regular mb-8 md:mb-12'>Why Chose Us?</h2>

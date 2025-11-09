@@ -6,7 +6,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 const fetcher = (url) => fetch(url).then(res => res.json())
-function Testimonials() {
+function Testimonials({className}) {
 
   const { data, error, isloading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/clients.json', fetcher)
   const slidePerson = data ? Object.values(data) : []
@@ -30,7 +30,7 @@ function Testimonials() {
       <section className='pb-6 middle:pb-8 xl:pb-12'>
         <div className="container">
           <div>
-            <h2 className='text-center text-5xl md:text-6xl lg:text-80px tracking-tightest text-neutral-950 font-RobotoSerif-Regular mb-8 md:mb-12'>Client’s Reviews</h2>
+            <h2 className={`text-5xl md:text-6xl lg:text-80px tracking-tightest text-neutral-950 font-RobotoSerif-Regular mb-8 md:mb-12 ${className}`}>Client’s Reviews</h2>
               <Slider {...settings}>
               {slidePerson.map((item, index) => {
                 const slideImg = slideImgBox[index % slideImgBox.length]
