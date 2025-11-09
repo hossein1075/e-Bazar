@@ -28,7 +28,7 @@ function NavDesktop() {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="#" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="/about" className='text-xl hover:text-orange-600 transition-original'>
                                     About
                                 </NavLink>
                             </li>
