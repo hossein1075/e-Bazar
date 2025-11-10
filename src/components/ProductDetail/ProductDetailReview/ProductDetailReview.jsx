@@ -8,9 +8,9 @@ function ProductDetailReview() {
     <section>
         <div className="container">
             <div>
-                <div>
-                    <h3>Reviews(36)</h3>
-                    <span>Product Detail</span>
+                <div className='mb-12 flex gap-8 items-center flex-wrap'>
+                    <h3 className='text-3xl sm:text-5xl middle:text-80px'>Reviews(36)</h3>
+                    <span className='font-RobotoSerif-Regular leading-[120%] sm:text-3xl md:text-4x-l-5 lg:text-6xl tracking-tightest text-neutral-600'>Product Detail</span>
                 </div>
                 <div>
                     <ProductDetailPerson/>
