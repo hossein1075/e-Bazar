@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProductDetailPerson() {
     return (
-        <div>
+        <div className='mb-8'>
              <div className='flex items-center mb-4 gap-4'>
                     <img src='/images/slider/Image-1.png' className='rounded-15px' alt="slide image" />
                     <h6 className='font-bold font-Lato-Bold text-xl'>Jeager Milka</h6>
