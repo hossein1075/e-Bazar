@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductDetailPerson from '../../main/componentsMain/ProductDetail/ProductDetailPerson/ProductDetailPerson'
+import ProductDetailForm from '../../main/componentsMain/ProductDetail/ProductDetailReviewForm/ProductDetailForm'
 
 function ProductDetailReview() {
   return (
@@ -13,6 +14,7 @@ function ProductDetailReview() {
                 </div>
                 <div>
                     <ProductDetailPerson/>
+                    <ProductDetailForm/>
                 </div>
             </div>
         </div>
