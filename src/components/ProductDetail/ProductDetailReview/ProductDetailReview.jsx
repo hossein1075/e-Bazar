@@ -7,7 +7,7 @@ import { productDetailinfo } from '../../main/componentsMain/ProductDetail/produ
 function ProductDetailReview() {
     return (
         <>
-            <section>
+            <section className=''>
                 <div className="container">
                     <div>
                         <div className='mb-12 flex gap-8 items-center flex-wrap'>
@@ -28,7 +28,7 @@ function ProductDetailReview() {
                                
                                 <ProductDetailAccordian />
                             </div>
-                            <div className='basis-[30%] w-full sm:w-auto mx-auto'>
+                            <div className='basis-[30%] w-full sm:w-auto mx-auto mt-5 lg:mt-0'>
                                 <ProductDetailForm />
                             </div>
                         </div>

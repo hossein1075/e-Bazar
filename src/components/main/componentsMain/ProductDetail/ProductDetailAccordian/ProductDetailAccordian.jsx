@@ -10,14 +10,17 @@ function ProductDetailAccordian() {
   return (
     <>
       <Accordion
-        sx={{
+        sx={  (theme) => ({
           background: 'inherit',
-          borderBottom: '3px solid #EC7755',
+         borderBottom: 'none',
           boxShadow: 'none',
           '&::before': {
             display: 'none'
+          },
+          [theme.breakpoints.up('lg')] : {
+              borderBottom: '3px solid #EC7755'
           }
-        }}
+        })}
       >
         <AccordionSummary
           
