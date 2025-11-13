@@ -65,7 +65,7 @@ function NavDesktop() {
                                         <NavLink to="/shop" className='text-xl block hover:text-orange-600 transition-original'>Cart</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Checkout</NavLink>
+                                        <NavLink to="/checkout" className='text-xl block hover:text-orange-600 transition-original'>Checkout</NavLink>
                                     </li>
                                 </ul>
                               </div>

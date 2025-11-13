@@ -50,13 +50,13 @@ function NavMobile() {
 
                                     {/* subMenu */}
 
-                                    <div className='absolute top-[96%] right-[64%] hidden group-hover:block z-50 bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
+                                    <div className='absolute top-[96%] right-[64%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                         <ul className='*:py-2'>
                                             <li>
-                                                <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</NavLink>
+                                                <NavLink to="/blogList" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</NavLink>
                                             </li>
                                             <li>
-                                                <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</NavLink>
+                                                <NavLink to="/blogDetail" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</NavLink>
                                             </li>
                                         </ul>
                                     </div>
@@ -76,7 +76,7 @@ function NavMobile() {
                                         <NavLink to="/shop" className='text-xl block hover:text-orange-600 transition-original'>Cart</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Checkout</NavLink>
+                                        <NavLink to="/checkout" className='text-xl block hover:text-orange-600 transition-original'>Checkout</NavLink>
                                     </li>
                                 </ul>
                               </div>
