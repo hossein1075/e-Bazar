@@ -41,7 +41,7 @@ function Products() {
                             ))}
                         </ul>
                     </div>
-                    <div className='flex gap-4 flex-wrap'>
+                    <div className='flex gap-4 flex-wrap justify-center'>
                         {filteredCategory.map((item, index) => {
                             const imgProduct = productBox[index % productBox.length]
                             return (

@@ -30,7 +30,7 @@ function Feautres() {
                     <div>
                         <h2 className='text-center text-5xl md:text-6xl lg:text-80px tracking-tightest text-neutral-950 font-RobotoSerif-Regular mb-8 md:mb-12'>Featured Products</h2>
 
-                        <div className='flex gap-4 flex-wrap'>
+                        <div className='flex gap-4 flex-wrap justify-center'>
                             {products.map((item,index) => {
                                 const featureImg = featureBox[index % featureBox.length]
                                 return (

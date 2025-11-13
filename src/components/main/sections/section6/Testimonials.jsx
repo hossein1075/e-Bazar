@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import BoxSlide from '../../componentsMain/BoxSlide/BoxSlide'
 import useSWR from 'swr'
 import { slideImgBox } from '../../../../APIimg'
@@ -6,17 +6,41 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 const fetcher = (url) => fetch(url).then(res => res.json())
-function Testimonials({className}) {
+function Testimonials({ className }) {
 
   const { data, error, isloading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/clients.json', fetcher)
   const slidePerson = data ? Object.values(data) : []
+  const sliderRef = useRef(null)
+  const [widthPage, setWidthPage] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleSize = () => setWidthPage(window.innerWidth)
+
+    window.addEventListener('resize', handleSize)
+    return () => window.removeEventListener('resize', handleSize)
+  }, [])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (sliderRef.current) {
+        sliderRef.current.slickGoTo(0)
+        sliderRef.current.innerSlider?.onWindowResized?.()
+      }
+
+    }, 50);
+
+    return  () => clearTimeout(timer) 
+  }, [widthPage, data])
+
+  const sliderShowTo = 
+  widthPage < 768 ? 1 : widthPage < 1024 ? 2 : 3
 
   const settings = {
     infinite: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 2000,
-    slidesToShow: 3,
+           slidesToShow: sliderShowTo,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
@@ -31,7 +55,7 @@ function Testimonials({className}) {
         <div className="container">
           <div>
             <h2 className={`text-5xl md:text-6xl lg:text-80px tracking-tightest text-neutral-950 font-RobotoSerif-Regular mb-8 md:mb-12 ${className}`}>Client’s Reviews</h2>
-              <Slider {...settings}>
+            <Slider ref={sliderRef} {...settings}>
               {slidePerson.map((item, index) => {
                 const slideImg = slideImgBox[index % slideImgBox.length]
                 return (

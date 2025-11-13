@@ -14,7 +14,7 @@ function ProductsBox({img, price, title, id}) {
   }
   return (
     <>
-      <div className='w-75 border-t-3 border-solid border-orange-600 mb-12 group'>
+      <div className={`sx:w-75 border-t-3 border-solid border-orange-600 mb-12 group`}>
         <div className='relative w-full rounded-b-3xl shadow-sub mb-4 cursor-pointer object-cover'>
           <img src={img} className='w-full rounded-b-3xl' alt="Product" />
           <span className='absolute bottom-0 right-0 rounded-br-3xl font-bold text-27px tracking-tightest3 p-2.5 bg-zinc-900 text-zinc-50'>${price}</span>

@@ -11,3 +11,9 @@
 .slick-prev:before, .slick-next:before {
   display: none;
 }
+.slick-slide > div {
+ display: grid;
+ place-items: center;
+
+}
+

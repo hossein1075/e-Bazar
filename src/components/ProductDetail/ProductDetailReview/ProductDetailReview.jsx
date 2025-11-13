@@ -7,7 +7,7 @@ import { productDetailinfo } from '../../main/componentsMain/ProductDetail/produ
 function ProductDetailReview() {
     return (
         <>
-            <section className=''>
+            <section className='py-8 sm:py-12'>
                 <div className="container">
                     <div>
                         <div className='mb-12 flex gap-8 items-center flex-wrap'>
@@ -17,7 +17,6 @@ function ProductDetailReview() {
                         <div className='flex flex-col lg:flex-row items-center lg:items-start'>
                             <div className='basis-[70%]'>
                                 {productDetailinfo.map(item => (
-
                                 <ProductDetailPerson 
                                 key={item.id}
                                 title={item.title}
