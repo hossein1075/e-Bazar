@@ -6,6 +6,7 @@ function BlogDetail() {
   return (
     <>
     <Header/>
+    <ShopBanner/>
     <Footer/>
     </>
   )
