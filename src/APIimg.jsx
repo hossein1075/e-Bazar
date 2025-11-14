@@ -37,18 +37,23 @@ const featureBox = [
     {id:8, img: '/images/Products/p-14.png',},
 ]
 const paginateImgBox = [
-    {id:1, img: 'public/images/blog/blog-1.png',},
-    {id:2, img: 'public/images/blog/blog-2.png',},
-    {id:3, img: 'public/images/blog/blog-3.png',},
-    {id:4, img: 'public/images/blog/blog-4.png',},
+    {id:1, img: '/images/blog/blog-1.png',},
+    {id:2, img: '/images/blog/blog-2.png',},
+    {id:3, img: '/images/blog/blog-3.png',},
+    {id:4, img: '/images/blog/blog-4.png',},
+    {id:5, img: '/images/blog/blog-5.png',},
+    {id:6, img: '/images/blog/blog-6.png',},
+    {id:7, img: '/images/blog/blog-7.png',},
+    {id:8, img: '/images/blog/blog-8.png',},
+    {id:8, img: '/images/blog/blog-6.png',},
 ]
 const slideImgBox = [
-    {id:1, img: 'public/images/slider/Image.png',},
-    {id:2, img: 'public/images/slider/Image-1.png',},
-    {id:3, img: 'public/images/slider/Image.png',},
-    {id:4, img: 'public/images/slider/Image-1.png',},
-    {id:5, img: 'public/images/slider/Image-2.png',},
-    {id:6, img: 'public/images/slider/Image.png',},
+    {id:1, img: '/images/slider/Image.png',},
+    {id:2, img: '/images/slider/Image-1.png',},
+    {id:3, img: '/images/slider/Image.png',},
+    {id:4, img: '/images/slider/Image-1.png',},
+    {id:5, img: '/images/slider/Image-2.png',},
+    {id:6, img: '/images/slider/Image.png',},
 ]
 
 
