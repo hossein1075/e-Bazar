@@ -42,10 +42,10 @@ function NavDesktop() {
                                <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                  <ul className='*:py-2'>
                                     <li>
-                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</NavLink>
+                                        <NavLink to="/blogList" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="#" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</NavLink>
+                                        <NavLink to="/blogDetail" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</NavLink>
                                     </li>
                                 </ul>
                                </div>

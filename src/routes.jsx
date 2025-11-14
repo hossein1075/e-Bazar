@@ -5,6 +5,7 @@ import Shop from "./pages/Shop";
 import CheckOut from "./pages/checkOut";
 import BlogDetail from "./pages/BlogDetail";
 import BlogList from "./pages/BlogList";
+
 let routes = [
     {path: '/', element: <Home/>},
     {path: '/shop', element: <Shop/>},
