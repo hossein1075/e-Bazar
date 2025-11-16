@@ -3,6 +3,7 @@ import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 import ShopBanner from '../components/Shop/Title/ShopBanner'
 import BlogDetailImg from '../BlogDetail/BlogDetailimg/BlogDetailImg'
+import BlogDetailComments from '../BlogDetail/BlogDetailComments/BlogDetailComments'
 function BlogDetail() {
   return (
     <>
@@ -11,6 +12,7 @@ function BlogDetail() {
     title='Blog Detail'
     />
     <BlogDetailImg/>
+    <BlogDetailComments/>
     <Footer/>
     </>
   )

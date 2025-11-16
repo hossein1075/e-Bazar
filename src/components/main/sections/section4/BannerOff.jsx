@@ -47,7 +47,7 @@ function BannerOff() {
     
   return (
     <>
-    <section className='flex items-center sm:bg-[url(/images/banner-bg.png)] bg-[position:top_right] bg-no-repeat bg-size-cover bg-white md:bg-transparent pt-8 pl-6 pb-12 md:pb-0 md:pt-0 md:pl-0 sm:h-137.5 lg::h-175'>
+    <section className='flex items-center sm:bg-[url(/images/banner-bg.png)] bg-[position:top_right] bg-no-repeat bg-cover bg-white md:bg-transparent pt-8 pl-6 pb-12 md:pb-0 md:pt-0 md:pl-0 sm:h-137.5 lg::h-175'>
         <div className="container flex flex-col items-start xl:items-end md:items-center">
             <div className='flex flex-col'>
                 <h5 className='font-bold font-Lato-Bold text-xl sm:text-3xl md:text-5xl tracking-tightest2 text-orange-600 mb-4'>Dry Fruits</h5>
