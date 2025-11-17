@@ -64,7 +64,7 @@ function Blog() {
                         <ul className='flexCenter gap-1.5 mt-6.25 *:hover:bg-orange-600 *:hover:text-zinc-50 *:rounded-10px *:size-8'>
                             <li className={`transition-original flexCenter`} onClick={(e) => {e.preventDefault() , changeHandler(currentPage - 1)}}>
                                 <button disabled={currentPage === 1}>
-                                    <SVGPaginationLeft />
+                                    <SVGPaginationLeft width='32px' height='32'/>
                                 </button>
                             </li>
                             {pageNumber.map(item => (
@@ -74,7 +74,7 @@ function Blog() {
                             ))}
                             <li className={`transition-original flexCenter`} onClick={(e) => {e.preventDefault() , changeHandler(currentPage + 1)}}>
                                 <button disabled={currentPage === pageCount}>
-                                    <SVGPaginationRight />
+                                    <SVGPaginationRight width='32px' height='32'/>
                                 </button>
                             </li>
                         </ul>
