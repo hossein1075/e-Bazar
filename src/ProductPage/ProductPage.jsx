@@ -12,7 +12,6 @@ function ProductPage() {
     let contextData = useContext(ProductsContext)
     console.log(contextData.allProducts);
     let location = useLocation()
-
     let mainProduct = location.state?.product
 
 
@@ -22,16 +21,16 @@ function ProductPage() {
             <ShopBanner
                 title='Product Detail'
             />
-            <section className=''>
+            <section className='mt-20 md:mt-25 pt-20 md:pt-25'>
                 <div className="container">
-                    <div>
+                    <div className='flex'>
                         <div>
                             <img src={mainProduct.img} alt="product img" />
                         </div>
                         <div>
-                            <div>
+                            <div className='flex'>
                                 <h5>{mainProduct.title}</h5>
-                                <span>{mainProduct.price}</span>
+                                <span className='font-bold text-27px tracking-tightest3 p-2 bg-zinc-900 text-zinc-50'>${mainProduct.price}</span>
                             </div>
                             <p>
                                 The Brogue features a distinctive perforated design on
@@ -48,7 +47,27 @@ function ProductPage() {
                                 Quantity: <span>/500g</span>
                             </h6>
                             <div>
-                                {/* count */}
+                            <div>
+
+                    <ul className='flex *:rounded-10px *:size-10 gap-2 font-bold font-Lato-Bold'>
+                        <li className='bg-zinc-50 flexCenter shadow-sub text-xl'>
+                            <button className='w-full'>
+                                -
+                            </button>
+                        </li>
+
+                        <li className='bg-orange-600 flexCenter shadow-sub text-xl text-zinc-50'>
+                               01
+                        </li>
+
+                        <li className='bg-zinc-50 flexCenter shadow-sub text-xl'>
+                            <button className='w-full'>
+                                +
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
                             </div>
                             <div>
                                 <BtnOrigin text={InfoBtnOrigin[2].info}/>
