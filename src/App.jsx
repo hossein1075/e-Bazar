@@ -58,6 +58,7 @@ function App() {
       ))
     ))
   }
+  
   return (
     <>
       <ProductsContext.Provider
@@ -74,11 +75,13 @@ function App() {
           decreaseCount
         }}
       >
-       {route}
+        <>
+        {route}
         {isShowSide && (
-         <div onClick={() => setIsShowSide(false)} className='fixed inset-0 z-[200] bg-zinc-800/20 h-full'></div> 
+          <div onClick={() => setIsShowSide(false)} className='fixed inset-0 z-[200] bg-zinc-800/20 h-full'></div>
         )}
         <SideBar />
+        </>
       </ProductsContext.Provider>
     </>
   )
