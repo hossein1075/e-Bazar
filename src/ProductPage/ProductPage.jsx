@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from '../components/header/Header'
 import ShopBanner from '../components/Shop/Title/ShopBanner'
 import BtnOrigin from '../components/main/componentsMain/BtnOrigin/BtnOrigin'
 import InfoBtnOrigin from '../components/main/componentsMain/BtnOrigin/InfoBtnOrigin'
+import { useLocation, useParams } from 'react-router-dom'
+import { ProductsContext } from '../Contexts/ProductsContext'
 
 function ProductPage() {
+
+    let { productID } = useParams()
+    let contextData = useContext(ProductsContext)
+    console.log(contextData.allProducts);
+    let location = useLocation()
+
+    let mainProduct = location.state?.product
+
+
     return (
         <>
             <Header />
@@ -15,12 +26,12 @@ function ProductPage() {
                 <div className="container">
                     <div>
                         <div>
-                            <img src="/images/Products/p-4.png" alt="product img" />
+                            <img src={mainProduct.img} alt="product img" />
                         </div>
                         <div>
                             <div>
-                                <h5>Pea Pickle Jar</h5>
-                                <span>$88</span>
+                                <h5>{mainProduct.title}</h5>
+                                <span>{mainProduct.price}</span>
                             </div>
                             <p>
                                 The Brogue features a distinctive perforated design on
@@ -28,7 +39,7 @@ function ProductPage() {
                                 refinement and chara-ter to the wearer of the shoepair.
                             </p>
                             <h6>
-                                Category: <span>Food & Drinks</span>
+                                Collection: <span>Products</span>
                             </h6>
                             <h6>
                                 SKU: <span>12 323 43</span>
