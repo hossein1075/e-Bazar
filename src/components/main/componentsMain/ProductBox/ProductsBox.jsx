@@ -12,6 +12,7 @@ function ProductsBox({img, price, title, id}) {
   const addCart = () => {
     const cart = {img, price, title, id}
     contextData.addToCart(cart)
+    
   }
   return (
     <>

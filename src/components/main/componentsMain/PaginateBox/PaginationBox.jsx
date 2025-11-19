@@ -3,6 +3,8 @@ import { PiSquareLight } from "react-icons/pi";
 import BtnOrigin from '../BtnOrigin/BtnOrigin';
 import InfoBtnOrigin from '../BtnOrigin/InfoBtnOrigin';
 import './PaginationBox.css'
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 function PaginationBox({title, img}) {
     return (
         <>
@@ -27,7 +29,9 @@ function PaginationBox({title, img}) {
                      Lorem ipsum dolor sit amet consectetur. Feugiat sit eleifend tortor lectus adipiscing aliquam.
                 </p>
                 <div>
-                    <BtnOrigin text={InfoBtnOrigin[4].info} className='w-full'/>
+                    <BtnOrigin text={InfoBtnOrigin[4].info} className='w-full' to='./blogDetail' onClick={()=> {
+                         toast("You have successfully entered the page!");
+                    }}/>
                 </div>
                 </div>
             </div>
