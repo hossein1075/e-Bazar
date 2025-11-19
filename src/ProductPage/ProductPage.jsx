@@ -5,6 +5,7 @@ import BtnOrigin from '../components/main/componentsMain/BtnOrigin/BtnOrigin'
 import InfoBtnOrigin from '../components/main/componentsMain/BtnOrigin/InfoBtnOrigin'
 import { useLocation, useParams } from 'react-router-dom'
 import { ProductsContext } from '../Contexts/ProductsContext'
+import Footer from '../components/footer/Footer'
 
 function ProductPage() {
 
@@ -21,7 +22,7 @@ function ProductPage() {
             <ShopBanner
                 title='Product Detail'
             />
-            <section className='mt-20 md:mt-25 pt-20 md:pt-25'>
+            <section className='mt-20 mb-10 middle:mb-17 md:mt-25 pt-20 md:pt-25'>
                 <div className="container flex middle:block justify-center">
                     <div className='flex flex-col middle:flex-row gap-6 max-w-[696px] middle:max-w-none'>
                         <div className='border-t-3  border-solid border-orange-600 basis-[50%]'>
@@ -73,6 +74,7 @@ function ProductPage() {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </>
     )
 }
