@@ -115,7 +115,7 @@ function App() {
         }}
       >
         <>
-          <ToastContainer position='bottom-left' autoClose={2000} closeOnClick={true} pauseOnFocusLoss={false} />
+          <ToastContainer position='bottom-left' autoClose={2000} closeOnClick={true} pauseOnFocusLoss={false}  toastClassName="custom-toast"/>
           {route}
           {isShowSide && (
             <div onClick={() => setIsShowSide(false)} className='fixed inset-0 z-[200] bg-zinc-800/20 h-full'></div>

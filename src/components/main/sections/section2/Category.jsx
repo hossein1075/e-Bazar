@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CategoryBox from '../../componentsMain/CategoryBox/CategoryBox'
 import { categoryBox } from '../../../../APIimg'
 import useSWR from 'swr'
+import { ShowError, ShowLoading, HideLoading } from '../../../../ToastAPI'
 
 const fetcher = (url) => fetch(url).then(res => res.json())
 function Category() {
@@ -9,6 +10,21 @@ function Category() {
         'https://info-products-7e7f7-default-rtdb.firebaseio.com/productsOff.json',
         fetcher
     )
+
+    useEffect(() => {
+        if(isLoading) {
+            ShowLoading()
+        } else {
+            HideLoading()
+        }
+
+    }, [isLoading])
+    useEffect(() => {
+         if(error) {
+            ShowError()
+        }
+
+    }, [error])
 
     const products = data ? (Array.isArray(data) ? data : Object.entries(data).map(([key, value]) => ({
     id: key,

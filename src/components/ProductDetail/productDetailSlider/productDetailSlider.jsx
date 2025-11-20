@@ -7,10 +7,25 @@ import ProductsBox from '../../main/componentsMain/ProductBox/ProductsBox'
 import useSWR from 'swr'
 import NextArrow from './NextArrow'
 import PrevArrow from './PrevArrow'
+import { HideLoading, ShowError, ShowLoading } from '../../../ToastAPI'
 
 const fetcher = (url) => fetch(url).then(res => res.json())
 function ProductDetailSlider() {
-  const { data, error, isloading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/category.json', fetcher)
+  const { data, error, isLoading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/category.json', fetcher)
+  useEffect(() => {
+          if(isLoading) {
+              ShowLoading()
+          } else {
+              HideLoading()
+          }
+  
+      }, [isLoading])
+      useEffect(() => {
+           if(error) {
+              ShowError()
+          }
+  
+      }, [error])
   const Detail = data ? Object.values(data) : []
    const sliderRef = useRef(null)
     const [widthPage, setWidthPage] = useState(window.innerWidth)

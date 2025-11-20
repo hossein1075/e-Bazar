@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ProductsBox from '../../componentsMain/ProductBox/ProductsBox'
 import BtnOrigin from '../../componentsMain/BtnOrigin/BtnOrigin'
 import './Products.css'
@@ -6,10 +6,12 @@ import InfoBtnOrigin from '../../componentsMain/BtnOrigin/InfoBtnOrigin'
 import useSWR from 'swr';
 import { productBox } from '../../../../APIimg'
 
+
 const fetcher = (url) => fetch(url).then(res => res.json())
 function Products() {
     // state category
     const [allProducts, setAllProducts] = useState('All')
+
 
     // API
     const { data, error, isLoading } = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/category.json', fetcher)

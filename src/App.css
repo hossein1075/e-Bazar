@@ -17,3 +17,8 @@
 
 }
 
+/* toast */
+.custom-toast {
+  z-index: 999 !important;
+}
+

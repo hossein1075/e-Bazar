@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PaginationBox from '../components/main/componentsMain/PaginateBox/PaginationBox'
 import useSWR from 'swr'
 import { paginateImgBox } from '../APIimg'
+import { HideLoading, ShowError, ShowLoading } from '../ToastAPI'
 
 const fetcher = (url) => fetch(url).then(res => res.json())
 function BlogListSec() {
   const { data, error, isLoading} = useSWR('https://info-products-7e7f7-default-rtdb.firebaseio.com/blog.json', fetcher)
-  console.log(data);
+ useEffect(() => {
+          if(isLoading) {
+              ShowLoading()
+          } else {
+              HideLoading()
+          }
+  
+      }, [isLoading])
+      useEffect(() => {
+           if(error) {
+              ShowError()
+          }
+  
+      }, [error])
   
   const dataBlog = data ? Object.values(data) : []
   console.log(dataBlog);
