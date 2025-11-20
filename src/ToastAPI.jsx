@@ -2,10 +2,10 @@ import React from 'react'
 import { toast } from 'react-toastify'
 let leodingId = null
 
-export function ShowLoading(msg = "در حال اتصال به سرور...") {
+export function ShowLoading(msg = "Connecting to server...") {
  if(!leodingId) {
  leodingId = toast.loading(msg, {
-      position: "bottom-left",
+      position: "top-left",
       closeOnClick: true,
     })
  }
@@ -17,9 +17,9 @@ export function HideLoading() {
     }
  
 }
-export function ShowError(msg = "خطا در اتصال به سرور!") {
+export function ShowError(msg = "Error connecting to server!") {
  toast.error(msg, {
-    position: "bottom-left",
+    position: "top-left",
     autoClose: 2000,
   })
 }

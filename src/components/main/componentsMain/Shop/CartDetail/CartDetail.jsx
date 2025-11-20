@@ -2,6 +2,7 @@ import React, { useContext, useMemo } from 'react'
 import BtnOrigin from '../../BtnOrigin/BtnOrigin'
 import InfoBtnOrigin from '../../BtnOrigin/InfoBtnOrigin'
 import { ProductsContext } from '../../../../../Contexts/ProductsContext'
+import Swal from 'sweetalert2'
 
 function CartDetail() {
 
@@ -10,12 +11,12 @@ function CartDetail() {
     const totalPrice = useMemo(() => {
         return contextData.cart.reduce((prev, next) => prev + next.price * next.count, 0)
     }, [contextData.cart])
-    
+
     const grandTotal = totalPrice
-    
+
     const ShippingFree = contextData.cart.length > 0 ? 5 : 0
     const Tax = contextData.cart.length > 0 ? 2.90 : 0
-     const Discount = contextData.cart.length > 0 ? 20 : 0
+    const Discount = contextData.cart.length > 0 ? 20 : 0
     const grandTotalFinal = (totalPrice + Tax + ShippingFree - Discount)
     return (
         <>
@@ -40,9 +41,39 @@ function CartDetail() {
 
                 <div className='flex justify-between pt-8 mb-8 border-t-3 border-solid border-orange-600'>
                     <span className='text-xl leading-[140%]'>Grand Total</span>
-                    <span className='font-Lato-Bold font-bold text-xl leading-[140%]'>{grandTotalFinal}</span>
+                    <span className='font-Lato-Bold font-bold text-xl leading-[140%]'>${grandTotalFinal}</span>
                 </div>
-                <BtnOrigin text={InfoBtnOrigin[7].info} className='w-full' onClick={() => contextData.setCart([])}/>
+                <BtnOrigin text={InfoBtnOrigin[7].info} className='w-full' onClick={() => {
+                    Swal.fire({
+                        title: 'Confirm Purchase',
+                        text: "Do you want to complete your purchase?",
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonColor: '#28a745',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, checkout!',
+                        cancelButtonText: 'No, keep shopping'
+                    }).then(result => {
+                        if (result.isConfirmed) {
+                            contextData.setCart([])
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Purchase Completed!',
+                                text: 'Thank you for your order.',
+                                timer: 2000,
+                                showConfirmButton: true,
+                            })
+                        } else {
+                            Swal.fire({
+                                icon: 'info',
+                                title: 'Cancelled',
+                                text: 'You can continue shopping.',
+                                timer: 1500,
+                                confirmButtonText: 'Close',
+                            })
+                        }
+                    })
+                }} />
             </div>
         </>
     )

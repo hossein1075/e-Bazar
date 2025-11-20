@@ -18,17 +18,17 @@ function NavDesktop() {
 
                         <ul className='flexCenter gap-8'>
                             <li>
-                                <NavLink to="/" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="/" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original' }>
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/shop" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="/shop" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original' }>
                                     Shop
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/about" className='text-xl hover:text-orange-600 transition-original'>
+                                <NavLink to="/about" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original' }>
                                     About
                                 </NavLink>
                             </li>
@@ -42,10 +42,10 @@ function NavDesktop() {
                                <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                  <ul className='*:py-2'>
                                     <li>
-                                        <NavLink to="/blogList" className='text-xl block hover:text-orange-600 transition-original'>Blog Listing</NavLink>
+                                        <NavLink to="/blogList" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original block' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original block' }>Blog Listing</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/blogDetail" className='text-xl block hover:text-orange-600 transition-original'>Blog Detail</NavLink>
+                                        <NavLink to="/blogDetail" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original block' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original block' }>Blog Detail</NavLink>
                                     </li>
                                 </ul>
                                </div>
@@ -59,13 +59,13 @@ function NavDesktop() {
                               <div className='absolute top-[105%] hidden group-hover:block bg-orange-50 border-t-3 border-solid border-orange-600 rounded-t-none rounded-b-[25px] py-3.75 px-6 z-40 w-60 shadow-sub'>
                                   <ul className='*:py-2'>
                                     <li>
-                                        <NavLink to="/productDetail" className='text-xl block hover:text-orange-600 transition-original'>Product Detail</NavLink>
+                                        <NavLink to="/productDetail" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original block' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original block' }>Product Detail</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/shop" className='text-xl block hover:text-orange-600 transition-original'>Cart</NavLink>
+                                        <NavLink to="/shop" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original block' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original block' }>Cart</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/checkout" className='text-xl block hover:text-orange-600 transition-original'>Checkout</NavLink>
+                                        <NavLink to="/checkout" className={({ isActive }) => isActive ? 'text-xl text-orange-600 transition-original block' : 'text-xl hover:text-orange-600 text-neutral-800 transition-original block' }>Checkout</NavLink>
                                     </li>
                                 </ul>
                               </div>
