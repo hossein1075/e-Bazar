@@ -9,6 +9,7 @@ import { useRoutes } from 'react-router-dom'
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'
+import ParticlesBackground from './ParticlesBackground/ParticlesBackground'
 function App() {
   const [allProducts, setAllProducts] = useState([])
   const [cart, setCart] = useState([])
@@ -115,6 +116,7 @@ function App() {
         }}
       >
         <>
+        <ParticlesBackground/>
           <ToastContainer position='bottom-left' autoClose={2000} closeOnClick={true} pauseOnFocusLoss={false}  toastClassName="custom-toast"/>
           {route}
           {isShowSide && (
