@@ -32,6 +32,24 @@
   z-index: -1 !important;
 }
 
+/* scrollBar */
+/* عرض اسکرول‌بار */
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* پس‌زمینه داخل اسکرول (طوسی) */
+html::-webkit-scrollbar-track {
+  background: #dcdcdc; 
+
+}
+
+/* خود نوار اسکرول (نارنجی) */
+html::-webkit-scrollbar-thumb {
+  background: #EC7755; 
+  border-radius: 10px;
+  border: 2px solid #dcdcdc; 
+}
 
 
 
