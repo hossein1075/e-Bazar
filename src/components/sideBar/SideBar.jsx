@@ -4,6 +4,7 @@ import BtnOrigin from '../main/componentsMain/BtnOrigin/BtnOrigin';
 import InfoBtnOrigin from '../main/componentsMain/BtnOrigin/InfoBtnOrigin';
 import { ProductsContext } from '../../Contexts/ProductsContext';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 function SideBar() {
 
     const contextData = useContext(ProductsContext)
@@ -16,7 +17,7 @@ function SideBar() {
                     <div className='flex items-center justify-between mb-8 font-RobotoSerif-Bold font-bold'>
                         <h3>
                             WISHLIST ITEMS
-                            <span className='tracking-tightest4 text-xs sx:ml-0.5'>(2)</span>
+                            <span className='tracking-tightest4 text-xs sx:ml-0.5'>({contextData.cart.reduce((total, item) => total + item.count, 0)})</span>
                         </h3>
                         <span onClick={() => contextData.setIsShowSide(false)} className='cursor-pointer'>
                             <IoMdClose className='size-7' />
@@ -32,7 +33,7 @@ function SideBar() {
                                     <h5 className='font-bold font-Lato-Bold text-zinc-900 mb-2'>{item.title}</h5>
                                     <h6 className='font-bold font-Lato-Bold text-zinc-900 mb-4'>{item.count} x ${item.price * item.count}</h6>
                                     <button className='text-orange-600 font-medium'>
-                                        <a href="#" onClick={() => contextData.removeCart(item.id)}>REMOVE</a>
+                                        <Link to="#" onClick={() => contextData.removeCart(item.id)}>REMOVE</Link>
                                     </button>
                                 </div>
                             </div>

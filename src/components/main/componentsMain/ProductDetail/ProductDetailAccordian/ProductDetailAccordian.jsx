@@ -55,7 +55,7 @@ function ProductDetailAccordian() {
               <img src={item.img} className='rounded-15px' alt="slide image" />
               <h6 className='font-bold font-Lato-Bold text-xl'>{item.title}</h6>
             </div>
-            <p className='leading-[150%] text-base tracking-tightest4 mb-4'>
+            <p className='leading-[150%] text-base tracking-tightest4 mb-4 max-w-200'>
               {item.desc}
             </p>
           </div>
