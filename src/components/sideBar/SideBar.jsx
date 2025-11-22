@@ -23,7 +23,7 @@ function SideBar() {
                             <IoMdClose className='size-7' />
                         </span>
                     </div>
-                    <div className='flex-1 overflow-y-auto'>
+                    <div className='flex-1 overflow-y-auto sidbar_scroll'>
                         {contextData.cart.map((item, index) => (
                             <div key={index} className='flex flex-col sx:flex-row items-center gap-4 mb-5'>
                                 <div className='size-20'>

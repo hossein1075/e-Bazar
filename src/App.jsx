@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'
 import ParticlesBackground from './ParticlesBackground/ParticlesBackground'
 import ButtonScroll from './ButtonScroll/ButtonScroll'
+import SmoothScroll from './SmoothScroll/SmoothScroll'
 function App() {
   const [allProducts, setAllProducts] = useState([])
   const [cart, setCart] = useState([])
@@ -118,7 +119,8 @@ function App() {
           decreaseCount
         }}
       >
-        <>
+        <SmoothScroll>
+
         <ParticlesBackground/>
         <ButtonScroll/>
           <ToastContainer position='bottom-left' autoClose={2000} closeOnClick={true} pauseOnFocusLoss={false}  toastClassName="custom-toast"/>
@@ -127,7 +129,8 @@ function App() {
             <div onClick={() => setIsShowSide(false)} className='fixed inset-0 z-[200] bg-zinc-800/20 h-full'></div>
           )}
           <SideBar />
-        </>
+
+        </SmoothScroll>
       </ProductsContext.Provider>
     </>
   )

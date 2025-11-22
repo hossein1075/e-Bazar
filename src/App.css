@@ -51,5 +51,23 @@ html::-webkit-scrollbar-thumb {
   border: 2px solid #dcdcdc; 
 }
 
+/* sidbar scroll */
+.sidbar_scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* پس‌زمینه داخل اسکرول (طوسی) */
+.sidbar_scroll::-webkit-scrollbar-track {
+  background: #dcdcdc; 
+
+}
+
+/* خود نوار اسکرول (نارنجی) */
+.sidbar_scroll::-webkit-scrollbar-thumb {
+  background: #EC7755; 
+  border-radius: 10px;
+  border: 2px solid #dcdcdc; 
+}
+
 
 

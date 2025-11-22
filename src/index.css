@@ -74,6 +74,9 @@
 /* elements */
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: var(--font-Lato-Regular);
     color: #2C2D2F;
