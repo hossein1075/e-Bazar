@@ -12,10 +12,12 @@ import Swal from 'sweetalert2'
 import ParticlesBackground from './ParticlesBackground/ParticlesBackground'
 import ButtonScroll from './ButtonScroll/ButtonScroll'
 import SmoothScroll from './SmoothScroll/SmoothScroll'
+import Loader from './Loader'
 function App() {
   const [allProducts, setAllProducts] = useState([])
   const [cart, setCart] = useState([])
   const [isShowSide, setIsShowSide] = useState(false)
+  const [loader, setLoader]= useState(true)
   const route = useRoutes(routes)
 
 
@@ -30,7 +32,11 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
-
+useEffect(()=> {
+  setTimeout(()=>{
+    setLoader(false)
+  },1500)
+},[])
 
 
   const addToCart = (product) => {
@@ -105,7 +111,9 @@ function App() {
 
   return (
     <>
-      <ProductsContext.Provider
+    {loader && <Loader loading={loader}/>}
+     {!loader && (
+       <ProductsContext.Provider
         value={{
           allProducts,
           setAllProducts,
@@ -132,6 +140,7 @@ function App() {
 
         </SmoothScroll>
       </ProductsContext.Provider>
+     )}
     </>
   )
 }
